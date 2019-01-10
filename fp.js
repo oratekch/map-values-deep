@@ -1,10 +1,10 @@
 const { isPlainObject, mapKeys, mapValues } = require('lodash/fp');
 
-const mapKeysDeep = cb => obj =>
+const mapValuesDeep = cb => obj =>
   Array.isArray(obj)
-    ? obj.map(mapKeysDeep(cb))
+    ? obj.map(mapValuesDeep(cb))
     : isPlainObject(obj)
-      ? mapValues(mapKeysDeep(cb))(mapKeys(cb)(obj))
+      ? mapValues(mapValuesDeep(cb))(mapValues(cb)(obj))
       : obj;
 
-module.exports = mapKeysDeep;
+module.exports = mapValuesDeep;
