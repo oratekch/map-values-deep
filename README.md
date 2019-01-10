@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/glennreyes/map-keys-deep.svg?branch=master)](https://travis-ci.org/glennreyes/map-keys-deep) [![Coverage Status](https://coveralls.io/repos/github/glennreyes/map-keys-deep/badge.svg?branch=master)](https://coveralls.io/github/glennreyes/map-keys-deep?branch=master)
 
-🔑 Maps object keys recursively, like [`mapKeys`](https://lodash.com/docs/#mapKeys) by Lodash but recursive.
+🔑 Maps object keys recursively, like [`mapValues`](https://lodash.com/docs/#mapValues) by Lodash but recursive.
 
 # Usage
 
@@ -15,9 +15,9 @@ yarn add map-keys-deep
 ## Simple sample usage
 
 ```js
-import mapKeysDeep from 'map-keys-deep';
+import mapValuesDeep from 'map-values-deep';
 
-mapKeysDeep({ Hello: { World: true } }, keys => keys.toLowerCase());
+mapValuesDeep({ Hello: { World: true } }, keys => keys.toLowerCase());
 // { hello: { world: true } }
 ```
 
@@ -25,12 +25,12 @@ mapKeysDeep({ Hello: { World: true } }, keys => keys.toLowerCase());
 
 ```js
 import { camelCase } from 'lodash/fp';
-import mapKeysDeep from 'map-keys-deep/fp';
+import mapValuesDeep from 'map-keys-deep/fp';
 
-mapKeysDeep(camelCase)({ hello_world: { bye_world: true } });
+mapValuesDeep(camelCase)({ hello_world: { bye_world: true } });
 // { helloWorld: { byeWorld: true } }
 
-mapKeysDeep(keys => keys.toLowerCase())({ Hello: { World: true } });
+mapValuesDeep(keys => keys.toLowerCase())({ Hello: { World: true } });
 // { hello: { world: true } }
 ```
 
