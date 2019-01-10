@@ -1,11 +1,11 @@
 {
-  "name": "map-keys-deep",
-  "description": "🔑 Maps object keys recursively",
+  "name": "map-values-deep",
+  "description": "🔑 Maps object values recursively",
   "author": "Glenn Reyes <glenn@glennreyes.com>",
   "version": "0.0.1",
-  "repository": "https://github.com/glennreyes/map-keys-deep.git",
+  "repository": "https://github.com/oratek/map-values-deep.git",
   "bugs": {
-    "url": "https://github.com/glennreyes/map-keys-deep/issues"
+    "url": "https://github.com/glennreyes/map-values-deep/issues"
   },
   "keywords": [
     "lodash",
