@@ -1,3 +1,3 @@
-const mapKeysDeep = require('./fp');
+const mapValuesDeep = require('./fp');
 
-module.exports = (obj, cb) => mapKeysDeep(cb)(obj);
+module.exports = (obj, cb) => mapValuesDeep(cb)(obj);
